@@ -1,0 +1,15 @@
+<h1>Registration Page</h1>
+
+<form method="POST" action="">
+    {% csrf_token %} {{form.username}}
+    <br /><br />{{form.email}} <br /><br />
+    {{form.password1}}
+    <br /><br />
+    {{form.password2}}
+    <br /><br />
+    <input type="submit" name="Create User" />
+    <br /><br />
+    {% for message in messaages %}
+    <p id="messages">{{message}}</p>
+    {% endfor %} {{form.errors}}
+</form>

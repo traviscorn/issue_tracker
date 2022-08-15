@@ -1,0 +1,52 @@
+<h1
+    style="
+        margin-top: 2em;
+        display: flex;
+        justify-content: center;
+        font-family: Arial;
+    "
+>
+    Login Page
+</h1>
+<div style="display: flex; justify-content: center; text-align: left">
+    <form method="POST" action="">
+        {% csrf_token %} {{form.username}}<br /><br />{{form.password}}<br /><br />
+        {% for message in messages %}
+        <p id="messages">{{message}}</p>
+        {% endfor %}
+        <input type="submit" name="authenticate" />
+    </form>
+</div>
+<div
+    style="
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        font-family: Arial;
+    "
+>
+    <p>
+        TO TEST AS A TEAM MEMBER<br />
+        username: usertest<br />
+        password: usertest
+    </p>
+
+    <p></p>
+</div>
+
+<div
+    style="
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        font-family: Arial;
+    "
+>
+    <p>
+        TO TEST AS A TEAM LEADER<br />
+        username: leadertest<br />
+        password: leadertest
+    </p>
+
+    <p></p>
+</div>
